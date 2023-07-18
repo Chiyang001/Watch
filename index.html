@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>展示照片和视频</title>
+    <title>华为儿童手表4X照片</title>
     <style>
      
         body {
@@ -142,22 +142,24 @@
     </div>
     
     <h1>视频展示</h1>
-    <div class="video-container">
-        <div class="video">
-            <video src="video1.mp4" controls></video>
-        </div>
-        <div class="video">
-            <video src="video2.mp4" controls></video>
-        </div>
-        <div class="video">
-            <video src="video3.mp4" controls></video>
-        </div>
-        <div class="video">
-            <video src="video4.mp4" controls></video>
-        </div>
-        <div class="video">
-            <video src="video4.mp4" controls></video>
-        </div>
+<div class="video-container">
+    <!-- 使用JavaScript动态生成视频元素 -->
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var videoContainer = document.querySelector('.video-container');
+        for (var j = 1; j <= 42; j++) {
+            var videoDiv = document.createElement('div');
+            videoDiv.className = 'video';
+            var video = document.createElement('video');
+            video.src = j + '.mp4';
+            video.controls = true;
+            videoDiv.appendChild(video);
+            videoContainer.appendChild(videoDiv);
+        }
+    });
+</script>
         <!-- 这里添加更多的视频 -->
     </div>
 </body>
