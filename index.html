@@ -122,19 +122,23 @@
 <body>
     <h1>照片展示</h1>
     <div class="photo-container">
-        <div class="photo">
-            <img src="DM_20230702144426_001.jpg" alt="照片 1">
-        </div>
-        <div class="photo">
-            <img src="photo2.jpg" alt="照片 2">
-        </div>
-        <div class="photo">
-            <img src="photo3.jpg" alt="照片 3">
-        </div>
-        <div class="photo">
-            <img src="photo4.jpg" alt="照片 4">
-        </div>
-        <!-- 这里添加更多的照片 -->
+        <!-- 使用JavaScript动态生成图片元素 -->
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var photoContainer = document.querySelector('.photo-container');
+            for (var i = 1; i <= 81; i++) {
+                var photoDiv = document.createElement('div');
+                photoDiv.className = 'photo';
+                var img = document.createElement('img');
+                img.src = i + '.jpg';
+                img.alt = '照片 ' + i;
+                photoDiv.appendChild(img);
+                photoContainer.appendChild(photoDiv);
+            }
+        });
+    </script>
     </div>
     
     <h1>视频展示</h1>
@@ -147,6 +151,9 @@
         </div>
         <div class="video">
             <video src="video3.mp4" controls></video>
+        </div>
+        <div class="video">
+            <video src="video4.mp4" controls></video>
         </div>
         <div class="video">
             <video src="video4.mp4" controls></video>
