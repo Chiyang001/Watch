@@ -155,6 +155,10 @@
             var video = document.createElement('video');
             video.src = j + '.mp4';
             video.controls = true;
+            
+            // 添加 preload="auto" 属性
+            video.setAttribute('preload', 'auto');
+            
             videoDiv.appendChild(video);
             videoContainer.appendChild(videoDiv);
         }
